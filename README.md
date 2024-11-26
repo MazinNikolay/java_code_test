@@ -19,4 +19,6 @@ _GET api/v1/wallets/{WALLET_UUID}_
 - Postgresql<br>
 <br> 
 Миграции для базы данных реализованы с помощью liquibase.<br> 
-Приложение и база данных запускается в докер контейне с помощью docker-compose
+Приложение и база данных запускается в докер контейне с помощью docker-compose.<br>
+Необходимо собрать проект командой mvn clean package и запустить командой docker-compose up --build
+
