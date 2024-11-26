@@ -7,8 +7,6 @@ services:
       POSTGRES_DB: java_code_test_db
     ports:
       - "5432:5432"
-    volumes:
-      - java_code_test_db-data:/var/lib/postgresql/data
 
   java_code_test:
     build: .
@@ -20,5 +18,3 @@ services:
       SPRING_DATASOURCE_PASSWORD: java_code
     depends_on:
       - java_code_test_db
-volumes:
-  java_code_test_db-data:
