@@ -60,7 +60,7 @@ class WalletOperationControllerTest {
                 .walletId(UUID.randomUUID())
                 .amount(BigDecimal.valueOf(1000)).build();
         //when
-        when(repository.findById(any(UUID.class))).thenReturn(Optional.of(entity));
+        when(repository.findByIdForUpdate(any(UUID.class))).thenReturn(Optional.of(entity));
         when(repository.save(any(WalletEntity.class))).thenReturn(entity);
         //then
         mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/wallet")

@@ -15,7 +15,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Builder
 public class WalletDto {
-    @Schema(description = "ID автора объявления")
+    @Schema(description = "Wallet")
     private UUID walletId;
     private OperationType operationType;
     private BigDecimal amount;
