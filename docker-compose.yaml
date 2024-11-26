@@ -1,0 +1,20 @@
+services:
+  java_code_test_db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: java_code
+      POSTGRES_PASSWORD: java_code
+      POSTGRES_DB: java_code_test_db
+    ports:
+      - "5432:5432"
+
+  java_code_test:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://java_code_test_db:5432/java_code_test_db
+      SPRING_DATASOURCE_USERNAME: java_code
+      SPRING_DATASOURCE_PASSWORD: java_code
+    depends_on:
+      - java_code_test_db
