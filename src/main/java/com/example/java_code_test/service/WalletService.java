@@ -45,12 +45,4 @@ public interface WalletService {
      * @return логическая доступность проведения операции.
      */
     boolean checkAmountSize(BigDecimal initAmount, BigDecimal operateAmount);
-    /**
-     * Метод для проверки наличия кошелька.
-     *
-     * @param walletId UUID идентификатор.
-     *
-     * @return сущность кошелька из БД.
-     */
-    WalletEntity checkWalletExist(UUID walletId);
 }
